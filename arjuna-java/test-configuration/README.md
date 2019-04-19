@@ -11,7 +11,8 @@ userOptions {
 
 }
 ```
-arjunaOptions are the options which were provided by arjuna to manipulate your automator propeties
+arjunaOptions are the options which were provided by arjuna to manipulate your automator properties
+
 | Option Name        | default value |
 | ------------- |:-------------:|
 | BROWSER_NAME | chrome |
