@@ -3,7 +3,7 @@ Docs for Arjuna java Client
 ### Getting Started with Arjuna Java Client
 #### Prerequisities
 Setup the Arjuna Framework service as per the instructions as per the given link.
-[Getting Started with Arjuna Frame work service](arjuna-python#getting-started-with-arjuna-frame-work-service)
+[Getting Started with Arjuna Frame work service](/../arjuna-python#getting-started-with-arjuna-frame-work-service)
 
 Install the following artifacts
 * Java 1.8
