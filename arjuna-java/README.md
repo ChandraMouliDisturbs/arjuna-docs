@@ -5,6 +5,7 @@ Docs for Arjuna java Client
 Setup the Arjuna Framework service as per the instructions as per the given link.
 [Getting Started with Arjuna Frame work service](../arjuna-python#getting-started-with-arjuna-frame-work-service)
 
+#### Building Arjuna locally
 Install the following artifacts
 * Java 1.8
 * Github Desktop or Git Bash 
