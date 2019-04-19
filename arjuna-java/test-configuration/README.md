@@ -20,9 +20,10 @@ arjunaOptions are the options which were provided by arjuna to manipulate your a
 | GUIAUTO_MAX_WAIT | 30 |
 | GUIAUTO_SLOMO_ON | off|
 
+
 Let's change the BROWSER_NAME value from chrome to firefox ans see what happens.
 Update the config to 
-```hocon
+```
 arjunaOptions {
     BROWSER_NAME = firefox
 }
