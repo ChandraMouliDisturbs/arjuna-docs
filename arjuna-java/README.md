@@ -30,7 +30,7 @@ Select Maven and Exisiting Maven Projects fromt he Import wizard.
 Click on Browse Select the `<arjuna_java_repo_root>` directory and click on OK.
 Select the two maven projects It not checked by default and click on Finish.
 
-###### Install Java Client jar
+###### Install Java Client jar from Gihub Repo
 
 Right click on the `arjuna-java` project, select Run As Maven install.
 If the following error message is prompted
@@ -49,14 +49,81 @@ The following console log will be prompted
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 ```
- ###### Setup arjuna-java-examples project.
 
-Right click on the `arjuna-java-examples` project, Select Maven and Update the Project.
-Place your driver executables under `<arjuna_java_repo_root>`\arjuna-java\arjuna-java-examples\guiauto\drivers\<host_os> directory
+###### Install Java Client from maven central
 
-Make sure you triggered launch-setu command in a seperate terminal before running java client code.
-Run the following class as a Java Application from eclipse.
+Include the following dependecy in your projects pom.xml
 
-arjex.s01config.Basic1WithCentralTestContext.
+```
+<dependency>
+    <groupId>com.testmile</groupId>
+    <artifactId>arjuna-java</artifactId>
+    <version>0.1.0</version>
+</dependency>
 
+```
+
+Creating a Test Project using Arjuna-java and testNG
+
+* Create a Maven Project.
+Add the following dependenciies to the pom.xml
+```
+<dependencies>
+		<dependency>
+			<groupId>com.testmile</groupId>
+			<artifactId>arjuna-java</artifactId>
+			<version><arjuna_latest_version></version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+		</dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+	</dependencies>
+```
+* Create `config` directory under project root.
+* Under config directory create a project.conf file.
+Create two sections in it.
+```
+arjunaOptions {
+
+}
+userOptions {
+
+}
+```
+* Place your selenium driver executable under `<project_dir>\guiauto\drivers\(linux|mac|windows)\driver_executable` Create the directory structure alike config.
+
+For e.g., 
+`<project-path>\guiauto\drivers\windows\chromedriver.exe`
+`<project-path>\guiauto\drivers\windows\geckodriver.exe`
+
+Writing a simple selenium test case using arjuna-java and testNG
+
+```
+import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
+
+import arjuna.tpi.Arjuna;
+import arjuna.tpi.guiauto.GuiAutomator;
+import arjuna.tpi.testng.TestNGBaseTest;
+
+@Test
+public class SimpleTest extends TestNGBaseTest{
+	
+	public void test() throws Exception {
+		GuiAutomator automator = Arjuna.createGuiAutomator();
+		automator.Browser().goToUrl("https://www.google.com");
+		String winTitle = automator.MainWindow().getTitle();
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(winTitle, "Google", "Window Title Should match");
+		automator.quit();
+	}
+}
+```
 
