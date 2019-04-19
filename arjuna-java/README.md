@@ -67,24 +67,24 @@ Creating a Test Project using Arjuna-java and testNG
 
 * Create a Maven Project.
 Add the following dependenciies to the pom.xml
-```
+```xml
 <dependencies>
-		<dependency>
-			<groupId>com.testmile</groupId>
-			<artifactId>arjuna-java</artifactId>
-			<version><arjuna_latest_version></version>
-		</dependency>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-		</dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-	</dependencies>
+	<dependency>
+		<groupId>com.testmile</groupId>
+		<artifactId>arjuna-java</artifactId>
+		<version><arjuna_latest_version></version>
+	</dependency>
+	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>6.14.3</version>
+	</dependency>
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
+</dependencies>
 ```
 * Create `config` directory under project root.
 * Under config directory create a project.conf file.
@@ -105,7 +105,7 @@ For e.g.,
 
 Writing a simple selenium test case using arjuna-java and testNG
 
-```
+```java
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
@@ -126,4 +126,14 @@ public class SimpleTest extends TestNGBaseTest{
 	}
 }
 ```
+Please find other styles of test writing in the belo Link
+
+[Test Writing in arjuna-java ](test-writing)
+
+In the above example chrome browser is launched. How do we launch other browsers?
+
+There are mutiple to do this through configuration.
+
+[Test configuration](test-configuration)
+
 
