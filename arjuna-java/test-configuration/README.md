@@ -38,6 +38,8 @@ Run the following Class
 
 ### Creating configuration programatically
 
+Arjuna `init()` returns a `TestContext` allows to build a custom config through `ConfigBuilder`.
+
 ```java
 TestContext context = Arjuna.init();
 context

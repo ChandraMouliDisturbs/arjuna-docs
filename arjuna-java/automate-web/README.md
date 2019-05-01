@@ -1,6 +1,6 @@
 ### Prerequisites
 
-Place your driver [Driver executables](#driver-executables)
+Place your driver [Driver executables](../#driver-executables)
 
 Initialsing Arjuna is a prerequisite to start automation with Arjuna. There are two possible ways to do this
 1. Handing the Arjuna `init()` to `arjuna.tpi.testng.TestNGBaseTest` by inherting it.
