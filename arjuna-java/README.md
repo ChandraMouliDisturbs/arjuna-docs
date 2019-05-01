@@ -97,8 +97,10 @@ arjunaOptions {
 userOptions {
 
 }
-###### Driver executables
+
 ```
+###### Driver executables
+
 * Place your selenium driver executable under `<project_dir>\guiauto\drivers\(linux|mac|windows)\driver_executable` Create the directory structure alike config.
 
 For e.g., 
