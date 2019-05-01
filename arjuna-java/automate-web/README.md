@@ -75,7 +75,7 @@ Providing the data to test can be passed in multiple ways.
 The following is one of it. Further we will see more ways to externalize the data.
 
 *project.conf*
-```json
+```
 arjunaOptions {
 	browser_name = chrome
 	browser.maximize = true
