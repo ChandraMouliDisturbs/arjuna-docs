@@ -97,6 +97,7 @@ arjunaOptions {
 userOptions {
 
 }
+###### Driver executables
 ```
 * Place your selenium driver executable under `<project_dir>\guiauto\drivers\(linux|mac|windows)\driver_executable` Create the directory structure alike config.
 
@@ -104,7 +105,7 @@ For e.g.,
 `<project-path>\guiauto\drivers\windows\chromedriver.exe`
 `<project-path>\guiauto\drivers\windows\geckodriver.exe`
 
-Writing a simple selenium test case using arjuna-java and testNG
+###### Writing a simple selenium test case using arjuna-java and testNG
 
 ```java
 import org.testng.annotations.Test;
